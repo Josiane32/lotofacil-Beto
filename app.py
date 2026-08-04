@@ -420,7 +420,24 @@ if analisar:
 
         mostrar_bolinhas(jogo["Numeros"])
 
-        st.success(f"Soma dos números: {jogo['Soma']}")
+        st.markdown(
+            f"""
+            <div style="
+                background: linear-gradient(90deg, #FFD54F, #FFC107);
+                color: #1B1B1B;
+                padding: 12px;
+                border-radius: 10px;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 15px;
+                box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            ">
+                💰 Soma dos números: {jogo['Soma']}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
         st.markdown(
             "</div>",
